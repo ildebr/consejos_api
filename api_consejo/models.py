@@ -12,7 +12,6 @@ class Consejo(models.Model):
     name = models.CharField(max_length = 100)
     type = models.CharField(max_length = 1, choices = CONSEJO_TYPE) #Asigno un maximo de tipo a cada consejo
     meet_date = models.DateField() #Fecha de reunión
-
     class Meta:
         ordering = ('meet_date',)
 

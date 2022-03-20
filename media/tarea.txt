@@ -1,0 +1,45 @@
+Mapa conceptual  21 enero
+Creación de modelos
+
+articulo seo 22 enero
+Tema
+
+Investigación de operaciones: Historia , aplicaciones y tendencias
+
+ 
+infografia: metodologia
+Aclaratoria:
+
+Este artículos de ustedes es conceptual y estado del arte (tendencias) , la investigación es tipo documental.
+
+
+En pareja va a implementar la metodología de investigación de operaciones en una idea tipo startup, modelar los productos y servicios a ofrecer al publico, crear la función de minimizar costo de producción y maximizar ganancias, así como también proponer una análisis de sensibilidad con un cambio en el modelo inicial para evaluar otra propuesta.  Aplicar el modelo de transporte y pert cpm en la planificación y control del proyecto.
+
+-----------------------------------ENUNCIADO DEL PROYECTO--------------------------------------------------------
+
+Cada enunciado será diferente, depende del emprendimiento de cada uno.
+
+--------------------------TABLA DE CONTENIDO DEL INFORME TÉCNICO-------------------------------------
+
+INTRODUCCIÓN
+
+Capítulo I: ANÁLISIS
+
+PLANTEAMIENTO DE LA PROPUESTA
+
+Diseño de marca, misión , visión 
+Descripción de la propuesta de optimización 
+Consideraciones y/o Restricciones
+Metodología 
+Marco Teórico
+Descripción del Plan de Trabajo con tiempo, perfiles, recursos y estimaciones de costo de servicios / presupuesto
+Capítulo II: DISEÑO
+
+Modelado de las propuestas 
+Capítulo III: IMPLEMENTACIÓN
+
+Solución con los métodos usando los software. 
+Capítulo IV: RESULTADOS
+
+simulación de escenarios y comparativa en gráficos 
+Presentación de resultados

@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import ConsejoList, ConsejoDetail, ConsejeroList, ConsejeroDetail, PuntoList, PuntoDetail, DocumentoList, DocumentoDetail, InstruccionesList, InstruccionesDetail 
-
+from .views import ConsejoList, ConsejoDetail, ConsejeroList, ConsejeroDetail, PuntoList, PuntoDetail, DocumentoList, DocumentoDetail, InstruccionesList, InstruccionesDetail, SaveFile
+from django.conf.urls.static import static
+from django.conf import settings
 app_name = 'consejo_api'
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
 	#Instrucciones
 	path('instrucciones/<int:pk>/', InstruccionesDetail.as_view(), name='instruccionesdetail'),
 	path('instrucciones/', InstruccionesList.as_view(), name="instruccioneslist"),
-]
+	path('savefile/', SaveFile)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
