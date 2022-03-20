@@ -12,7 +12,6 @@ class Consejo(models.Model):
     name = models.CharField(max_length = 100)
     type = models.CharField(max_length = 1, choices = CONSEJO_TYPE) #Asigno un maximo de tipo a cada consejo
     meet_date = models.DateField() #Fecha de reunión
-
     class Meta:
         ordering = ('meet_date',)
 
@@ -28,7 +27,6 @@ class Consejero(models.Model):
         return f'{self.user.user_name}'
 
 class Punto(models.Model):
-    consejos_puntos = models.ManyToManyField(Consejo)
     PUNTO_TYPE = (
         ('D', 'Decision'),
         ('I', 'Informacion'),
@@ -38,6 +36,7 @@ class Punto(models.Model):
         ('D', 'Diferido'),
     )
 
+    consejos_puntos = models.ManyToManyField(Consejo)
     id_consejero = models.ForeignKey(Consejero, on_delete = models.CASCADE) 
     enunciate = models.CharField(max_length = 100)
     type = models.CharField(max_length = 1, choices = PUNTO_TYPE) #Asigno un maximo de tipo a cada punto

@@ -16,7 +16,6 @@ class CustomAccountManager(BaseUserManager):
 	def create_user(self, email, user_name, first_name, password, **other_fields):
 		if not email:
 			raise ValueError(_('Debes ingresar un correo'))
-
 		email = self.normalize_email(email)
 		user = self.model(email=email, user_name=user_name, first_name=first_name, **other_fields)
 		user.set_password(password)
@@ -33,7 +32,7 @@ class NewUser(AbstractBaseUser, PermissionsMixin):
 	start_date = models.DateTimeField(default=timezone.now)
 	about = models.TextField(_('sobre'), max_length=500, blank=True)
 	is_staff = models.BooleanField(default=False)
-	is_active=models.BooleanField(default=False)
+	is_active=models.BooleanField(default=True)
 
 	objects = CustomAccountManager()
 

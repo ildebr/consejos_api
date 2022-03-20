@@ -19,9 +19,9 @@ from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshVie
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('api_consejo.urls', namespace="consejo_api")),
-    path('api/user/', include('users.urls', namespace="users")),
-    path('api-auth/', include('rest_framework.urls', namespace="rest_framework")),
-    path('api/token/', TokenObtainPairView.as_view(), name="token_obtain_pair"),
-    path('api/token/refresh', TokenRefreshView.as_view(), name='token_refresh'), 
+    path('api/', include('api_consejo.urls', namespace="consejo_api")), #Raiz de Endpoints del API de consejo
+    path('api/user/', include('users.urls', namespace="users")), #Redirecciona a users con el unico endpoint de crear usuario
+    path('api-auth/', include('rest_framework.urls', namespace="rest_framework")), 
+    path('api/token/', TokenObtainPairView.as_view(), name="token_obtain_pair"), #Endpoint para enviar los datos de un usuario y obtener el token de inicio de sesión
+    path('api/token/refresh', TokenRefreshView.as_view(), name='token_refresh'), #Endpoint para refrescar el token
 ]
