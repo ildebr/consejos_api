@@ -14,19 +14,19 @@ from rest_framework.permissions import SAFE_METHODS, IsAuthenticatedOrReadOnly,I
 #Consejo
 
 class ConsejoList(generics.ListCreateAPIView):
-	permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
+	#permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
 	queryset = Consejo.objects.all()
 	serializer_class = ConsejoSerializer
 
 class ConsejoDetail(generics.RetrieveUpdateDestroyAPIView):
-	permission_classes=[IsAuthenticatedOrReadOnly]
+	#permission_classes=[IsAuthenticatedOrReadOnly]
 	queryset = Consejo.objects.all()
 	serializer_class =ConsejoSerializer
 
 #Consejeros
 
 class ConsejeroList(generics.ListCreateAPIView):
-	permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
+	#permission_classes = [DjangoModelPermissionsOrAnonReadOnly]
 	queryset = Consejero.objects.all()
 	serializer_class = ConsejeroSerializer
 
@@ -58,7 +58,7 @@ class DocumentoDetail(generics.RetrieveUpdateDestroyAPIView):
 #Instrucciones
 
 class InstruccionesList(generics.ListCreateAPIView):
-	permission_classes = [DjangoModelPermissions]
+	#permission_classes = [DjangoModelPermissions]
 	queryset = Instrucciones.objects.all()
 	serializer_class = InstruccionesSerializer
 
