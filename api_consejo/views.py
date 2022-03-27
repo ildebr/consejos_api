@@ -66,6 +66,8 @@ class InstruccionesDetail(generics.RetrieveUpdateDestroyAPIView):
 	queryset = Instrucciones.objects.all()
 	serializer_class = InstruccionesSerializer
 
+
+
 #Para guardar archivos
 @csrf_exempt
 def SaveFile(request):
